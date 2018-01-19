@@ -10,15 +10,22 @@ import android.view.MotionEvent;
 public class MainActivity extends AppCompatActivity implements GestureDetector.OnGestureListener, GestureDetector.OnDoubleTapListener{
 
 
-    private TextView tx;
+    private TextView tx,mt;
     private GestureDetector Gesture;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         tx = (TextView) findViewById(R.id.firstText);
+        mt = (TextView) findViewById(R.id.midText);
         this.Gesture = new GestureDetector(this,this);
         Gesture.setOnDoubleTapListener(this);
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        this.Gesture.onTouchEvent(event);
+        return super.onTouchEvent(event);
     }
 
     @Override
@@ -35,16 +42,19 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
 
     @Override
     public boolean onDoubleTapEvent(MotionEvent motionEvent) {
+        tx.setText("DoubleTapEvenr");
         return false;
     }
 
     @Override
     public boolean onDown(MotionEvent motionEvent) {
+        mt.setText("onDown");
         return false;
     }
 
     @Override
     public void onShowPress(MotionEvent motionEvent) {
+
 
     }
 
@@ -55,12 +65,13 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
 
     @Override
     public boolean onScroll(MotionEvent motionEvent, MotionEvent motionEvent1, float v, float v1) {
+        mt.setText("Scolling");
         return false;
     }
 
     @Override
     public void onLongPress(MotionEvent motionEvent) {
-
+        mt.setText("LongPress");
     }
 
     @Override

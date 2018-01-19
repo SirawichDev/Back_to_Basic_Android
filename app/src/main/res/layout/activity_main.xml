@@ -14,9 +14,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
+        android:padding="20dp"
         android:layout_centerHorizontal="true"
-        android:text="Hello"
+        android:text="First Button"
         android:textAlignment="center"
+        android:background="#8E24AA"
         android:textSize="20sp"
 
         tools:layout_editor_absoluteX="50dp" />
@@ -24,7 +26,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Second Button"
+        android:textSize="20sp"
+        android:background="#E91E63"
+        android:id="@+id/midText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
