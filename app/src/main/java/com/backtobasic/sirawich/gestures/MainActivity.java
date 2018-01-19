@@ -16,16 +16,20 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        tx = (TextView) findViewById(R.id.)
+        tx = (TextView) findViewById(R.id.firstText);
+        this.Gesture = new GestureDetector(this,this);
+        Gesture.setOnDoubleTapListener(this);
     }
 
     @Override
     public boolean onSingleTapConfirmed(MotionEvent motionEvent) {
+        tx.setText("Singletap");
         return false;
     }
 
     @Override
     public boolean onDoubleTap(MotionEvent motionEvent) {
+        tx.setText("DoubleTap");
         return false;
     }
 
