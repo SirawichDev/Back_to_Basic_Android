@@ -7,13 +7,16 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+/**
+ * Created by TimeStoper on 20/1/2561.
+ */
 
-public class MyFragment extends Fragment {
-
+public class Buttom_Fragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-       View view = inflater.inflate(R.layout.activity_my_fragment,container,false);
+        View view = inflater.inflate(R.layout.button_pic_fragment,container,false);
         return view;
     }
+
 }

@@ -1,5 +1,6 @@
 package com.backtobasic.sirawich.gestures;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,12 +11,12 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.view.MotionEvent;
 
-public class MainActivity extends AppCompatActivity implements GestureDetector.OnGestureListener, GestureDetector.OnDoubleTapListener{
+public class MainActivity extends Activity implements GestureDetector.OnGestureListener, GestureDetector.OnDoubleTapListener{
 
 
     private TextView tx,mt;
     private GestureDetector Gesture;
-    private Button bt;
+    public Button bt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +26,15 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
         bt = (Button) findViewById(R.id.nextbut);
         this.Gesture = new GestureDetector(this,this);
         Gesture.setOnDoubleTapListener(this);
+        bt.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+
+                // Start NewActivity.class
+                Intent myIntent = new Intent(MainActivity.this,
+                        Combine_2_Fragment.class);
+                startActivity(myIntent);
+            }
+        });
     }
 
     @Override
@@ -84,8 +94,5 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
     public boolean onFling(MotionEvent motionEvent, MotionEvent motionEvent1, float v, float v1) {
         return false;
     }
-    public void nextac(View view){
-    Intent i = new Intent(this,MyFragment.class);
-    startActivity(i);
-    }
+
 }
