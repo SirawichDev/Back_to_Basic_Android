@@ -1,9 +1,11 @@
 package com.backtobasic.sirawich.gestures;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.support.v4.view.GestureDetectorCompat;
+import android.widget.Button;
 import android.widget.TextView;
 import android.view.MotionEvent;
 
@@ -12,12 +14,14 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
 
     private TextView tx,mt;
     private GestureDetector Gesture;
+    private Button bt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         tx = (TextView) findViewById(R.id.firstText);
         mt = (TextView) findViewById(R.id.midText);
+        bt = (Button) findViewById(R.id.)
         this.Gesture = new GestureDetector(this,this);
         Gesture.setOnDoubleTapListener(this);
     }
@@ -72,6 +76,7 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
     @Override
     public void onLongPress(MotionEvent motionEvent) {
         mt.setText("LongPress");
+
     }
 
     @Override
