@@ -38,6 +38,8 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/midText"
         android:layout_marginTop="20dp"
-        id/>
+        android:id="@+id/nextbut"
+        android:onClick="nextac"
+        />
 
 </RelativeLayout>
