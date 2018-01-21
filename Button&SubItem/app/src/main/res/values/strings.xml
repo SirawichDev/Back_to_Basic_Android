@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Button_SubItem</string>
+    <string name="butt_say">Click Here!</string>
+    <string name="textview_say">WHAT THE FOX</string>
+    <string-array name="sub_item">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+    </string-array>
+
+</resources>
