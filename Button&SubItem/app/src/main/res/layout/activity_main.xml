@@ -5,11 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.backtobasic.sirawich.button_subitem.MainActivity">
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="#039BE5">
 
+    </Spinner>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="@string/textview_say"
       android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_below="@+id/Butt"
@@ -21,5 +27,7 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
-        android:text="Click here" />
+        android:text="@string/butt_say"
+        android:background="#64FFDA"
+        android:padding="20dp"/>
 </RelativeLayout>

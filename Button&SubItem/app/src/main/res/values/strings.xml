@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Button_SubItem</string>
+    <string name="butt_say">Click Here!</string>
+    <string name="textview_say">WHAT THE FOX</string>
 </resources>
