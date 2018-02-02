@@ -19,3 +19,6 @@
 * compilesdkveersion เป็นตัวกำหนด  Api level เป็น 
 * compile version มีผลกับ sdk ที่เราโหลดมา 
 * minsdkversion => versionsdk ต่ำสุดที่สามารถเอาไปรันได้
+> * dependencies 
+* file tree ไฟล์ .jarทั้งหมด เข้ามา ใน lib
+* gradle จะไปเอาlib ที่ implement มาจาก jcenter() และ google()
