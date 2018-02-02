@@ -15,3 +15,7 @@
 //Module => application module
 * local.	properties => กำหนดตำแหน่งของ SDK
 * gradlle.properties =>ตัว config ของตัว Gradle 
+* bulid.gradle(module) 
+* compilesdkveersion เป็นตัวกำหนด  Api level เป็น 
+* compile version มีผลกับ sdk ที่เราโหลดมา 
+* minsdkversion => versionsdk ต่ำสุดที่สามารถเอาไปรันได้
