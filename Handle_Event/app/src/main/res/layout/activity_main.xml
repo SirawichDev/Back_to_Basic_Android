@@ -49,21 +49,23 @@
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/relativeLayout3">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:text="Hello i'm buttom end"
+        android:text="Hello i'm buttom left end"
         android:layout_marginTop="470dp"
         />
     </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text=""/>
-    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:text="Hello i'm buttom right end" />
+
 </RelativeLayout>
