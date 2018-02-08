@@ -44,14 +44,22 @@
         android:layout_below="@id/Text"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/colorPrimaryDark"/>
-<RelativeLayout
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent">
+        android:textColor="@color/colorPrimaryDark"
+        android:id="@+id/button" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="75dp">
+
+    </RelativeLayout>
+
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello i'm bottom left"/>
-
-</RelativeLayout>
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:text="Hello i'm bottom left" />
 </RelativeLayout>
