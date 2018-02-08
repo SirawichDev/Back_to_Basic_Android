@@ -12,11 +12,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+     
     }
-    public void ChoosingClick (View view){
+    public void spclick(View view){
         TextView Showme = (TextView)findViewById(R.id.showme);
         Spinner atod = (Spinner)findViewById(R.id.sp);
         String show = String.valueOf(atod.getSelectedItem());
         Showme.setText(show);
     }
+
+
 }
