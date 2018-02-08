@@ -13,6 +13,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hello i'm Relative left"
+            android:id="@+id/LeftText"
             android:textColor="#2E7D32"
             android:layout_marginTop="20dp"
             />
