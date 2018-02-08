@@ -13,6 +13,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hello i'm Relative left"
+            android:id="@+id/LeftText"
             android:textColor="#2E7D32"
             android:layout_marginTop="20dp"
             />
@@ -57,6 +58,7 @@
         android:layout_height="match_parent"
         android:text="Hello i'm buttom left end"
         android:layout_marginTop="470dp"
+        android:id="@+id/btleftin"
         />
     </RelativeLayout>
 
@@ -67,6 +69,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="20dp"
+        android:id="@+id/btrightbut"
         android:text="Hello i'm buttom right end" />
 
 </RelativeLayout>
