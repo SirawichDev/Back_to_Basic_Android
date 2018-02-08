@@ -2,6 +2,7 @@ package com.backtobasic.sirawich.handle_event;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -27,12 +28,21 @@ public class MainActivity extends AppCompatActivity {
                new Button.OnLongClickListener(){
                    @Override
                    public boolean onLongClick(View v) {
+
                         TextView gg = (TextView)findViewById(R.id.btleftin);
                         gg.setText("WTF");
                         TextView mm = (TextView)findViewById(R.id.btrightbut);
                         mm.setText("Yo");
                         return true;
                    }
+       });
+       bx.setOnHoverListener(new Button.OnHoverListener(){
+           @Override
+           public boolean onHover(View view, MotionEvent motionEvent) {
+               TextView gg = (TextView)findViewById(R.id.btleftin);
+               gg.setText("Hover");
+               return false;
+           }
        });
     }
 }
