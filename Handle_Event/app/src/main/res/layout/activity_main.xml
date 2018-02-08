@@ -58,6 +58,7 @@
         android:layout_height="match_parent"
         android:text="Hello i'm buttom left end"
         android:layout_marginTop="470dp"
+        android:id="@+id/btleftin"
         />
     </RelativeLayout>
 

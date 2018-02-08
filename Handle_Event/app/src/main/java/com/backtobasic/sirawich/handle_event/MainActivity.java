@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 public class MainActivity extends AppCompatActivity {
     private Button bx;
     @Override
@@ -20,5 +22,15 @@ public class MainActivity extends AppCompatActivity {
                 xx.setText("GGWP");
             }
         });
+
+       bx.setOnLongClickListener(
+               new Button.OnLongClickListener(){
+                   @Override
+                   public boolean onLongClick(View v) {
+                        TextView gg = (TextView)findViewById(R.id.btleftin);
+                        gg.setText("WTF");
+                       return true;
+                   }
+       });
     }
 }
