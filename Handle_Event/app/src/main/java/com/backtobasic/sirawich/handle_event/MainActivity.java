@@ -29,7 +29,9 @@ public class MainActivity extends AppCompatActivity {
                    public boolean onLongClick(View v) {
                         TextView gg = (TextView)findViewById(R.id.btleftin);
                         gg.setText("WTF");
-                       return true;
+                        TextView mm = (TextView)findViewById(R.id.btrightbut);
+                        mm.setText("Yo");
+                        return true;
                    }
        });
     }
