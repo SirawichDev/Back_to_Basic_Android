@@ -26,5 +26,6 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="40dp"
+        android:onClick="ChoosingClick"
         android:text="Click"/>
 </RelativeLayout>
