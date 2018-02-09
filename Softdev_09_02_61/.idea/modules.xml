@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Softdev_09_02_61.iml" filepath="$PROJECT_DIR$/Softdev_09_02_61.iml" />
+      <module fileurl="file://C:\Users\TimeStoper\Desktop\Back_to_Basic_Android\Softdev_09_02_61\Softdev_09_02_61.iml" filepath="C:\Users\TimeStoper\Desktop\Back_to_Basic_Android\Softdev_09_02_61\Softdev_09_02_61.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\TimeStoper\Desktop\Back_to_Basic_Android\Softdev_09_02_61\app\app.iml" filepath="C:\Users\TimeStoper\Desktop\Back_to_Basic_Android\Softdev_09_02_61\app\app.iml" />
     </modules>
   </component>
 </project>
