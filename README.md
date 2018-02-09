@@ -22,3 +22,4 @@
 > * dependencies 
 * file tree ไฟล์ .jarทั้งหมด เข้ามา ใน lib
 * gradle จะไปเอาlib ที่ implement มาจาก jcenter() และ google()
+* เขียนตัวอักษารอืนให้ใช้ dp แต่ว่า ถ้าจะทำ Text ข้อความใช้ sp
