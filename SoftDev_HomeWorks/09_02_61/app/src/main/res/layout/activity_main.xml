@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="homework.softdev.sirawich.softdev_homework_1.MainActivity">
+   <TextView
+
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginVertical="40dp"
+       android:textSize="20sp"
+       android:id="@+id/head1"
+       android:text="Celsius to Fahrenheit converter"
+     android:layout_margin="50dp"
+       android:textColor="#2E7D32"
+       />
+   <EditText
+       android:layout_width="0dp"
+       android:id="@+id/Editext1"
+       android:layout_height="wrap_content"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/head1"
+
+       android:hint="Enter Celsius Here"
+       app:layout_constraintRight_toLeftOf="@+id/btn1"/>
+
+   <Button
+       android:id="@+id/btn1"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:background="#1E88E5"
+       android:text="Convert"
+       app:layout_constraintTop_toBottomOf="@id/head1"
+
+       app:layout_constraintRight_toRightOf="parent"
+    />
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Fahrenheit to Celsius converter"
+       android:layout_marginTop="10dp"
+       app:layout_constraintTop_toBottomOf="@id/Editext1"
+       android:textSize="20sp"/>
+   <EditText
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:id="@+id/Editext2"
+       android:hint="Enter Fahrenheit Here"
+       android:layout_marginTop="30dp"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintRight_toRightOf="@id/btn2"
+       app:layout_constraintTop_toBottomOf="@id/Editext1"
+       />
+   <Button
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="convert"
+       android:id="@+id/btn2"
+       android:layout_marginTop="30dp"
+       android:background="#B0BEC5"
+       app:layout_constraintTop_toBottomOf="@id/Editext1"
+       app:layout_constraintRight_toRightOf="parent"
+       />
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Status"
+       android:layout_marginTop="20dp"
+       android:textColor="#FF7043"
+       app:layout_constraintTop_toBottomOf="@id/Editext2"
+       android:textSize="20sp"/>
+
+</android.support.constraint.ConstraintLayout>
