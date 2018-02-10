@@ -74,8 +74,6 @@ public class MainActivity extends AppCompatActivity {
         String GG = "°F";
         Log.e(TAG, "Hello inp1");
         Edt1 = (EditText) findViewById(R.id.Editext1);
-
-
         if (!Edt1.getText().toString().trim().matches(regexStr)) {
             if(Edt1.getText().toString().contains("°F")){
                 Edt1.setText("");
@@ -101,11 +99,12 @@ public class MainActivity extends AppCompatActivity {
         String regexStr = "^[0-9]*$";
         Edt2 = (EditText) findViewById(R.id.Editext2);
         if (!Edt2.getText().toString().trim().matches(regexStr)) {
-            if(Edt2.getText().toString().contains("°F")){
+            if(Edt2.getText().toString().contains("°C")){
+                Edt2.setText("");
+            }else {
+                Toast.makeText(getApplicationContext(), "Sorry you must Input Only The number!!", Toast.LENGTH_LONG).show();
                 Edt2.setText("");
             }
-            Toast.makeText(getApplicationContext(), "Sorry you must Input Only The number!!", Toast.LENGTH_LONG).show();
-            Edt2.setText("");
             return false;
         }
         if (Edt2.getText().toString().isEmpty()) {
