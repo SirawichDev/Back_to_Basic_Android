@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         }
         int cal1 = Integer.parseInt(Edt1.getText().toString());
         int conver1= (cal1 * 9/5)+32;
-        Edt1.setText(String.valueOf(conver1));
+        Edt1.setText(String.valueOf(conver1)+"°F");
         Log.e(TAG,"Go to true");
     return true;
     }
