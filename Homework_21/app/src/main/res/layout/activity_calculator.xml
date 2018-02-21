@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="122dp"
-        android:background="#fff"
+        android:background="#B2EBF2"
         android:id="@+id/screen"
         android:hint="Number Here"
         android:textSize="30sp"
@@ -21,9 +21,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
+        android:id="@+id/x"
         android:layout_marginTop="20dp"
         app:layout_constraintRight_toLeftOf="parent"
         app:layout_constraintLeft_toRightOf="parent"
+
         app:layout_constraintTop_toBottomOf="@+id/screen">
     <Button
         android:layout_width="wrap_content"
@@ -34,6 +36,7 @@
        android:gravity="center"
         android:id="@+id/ac"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/sev"
         app:layout_constraintTop_toBottomOf="@+id/screen" />
 
     <Button
@@ -75,17 +78,23 @@
         app:layout_constraintTop_toBottomOf="@+id/screen"
         app:layout_constraintLeft_toRightOf="@+id/mod"
         />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/round_horizental"
-            android:text="7"
-            android:padding="20dp"
-            android:gravity="center"
-            android:id="@+id/sev"
-            android:layout_marginLeft="7dp"
-            app:layout_constraintBottom_toTopOf="@+id/ac"
-            />
-    </android.support.constraint.ConstraintLayout>
 
+    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:id="@+id/xx"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/x">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_horizental"
+        android:text="7"
+        android:padding="20dp"
+        android:gravity="center"
+        android:id="@+id/sev"
+        android:layout_marginLeft="7dp"
+
+     />
+    </android.support.constraint.ConstraintLayout>
 </android.support.constraint.ConstraintLayout>
