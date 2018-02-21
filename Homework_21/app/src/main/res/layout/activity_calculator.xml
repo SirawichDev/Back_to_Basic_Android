@@ -20,6 +20,7 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
         android:layout_marginTop="20dp"
         app:layout_constraintRight_toLeftOf="parent"
         app:layout_constraintLeft_toRightOf="parent"
@@ -40,6 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="7dp"
+
         android:background="@drawable/round"
         android:gravity="center"
         android:padding="20dp"
@@ -73,5 +75,17 @@
         app:layout_constraintTop_toBottomOf="@+id/screen"
         app:layout_constraintLeft_toRightOf="@+id/mod"
         />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_horizental"
+            android:text="7"
+            android:padding="20dp"
+            android:gravity="center"
+            android:id="@+id/sev"
+            android:layout_marginLeft="7dp"
+            app:layout_constraintBottom_toTopOf="@+id/ac"
+            />
     </android.support.constraint.ConstraintLayout>
+
 </android.support.constraint.ConstraintLayout>

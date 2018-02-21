@@ -1,5 +1,6 @@
 package me.softdev.sirawich.softdev_09_02_61;
 
+import android.renderscript.Sampler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.*;
@@ -30,7 +31,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void Showme(View view){
         tx = (TextView)findViewById(R.id.Fuck);
-        tx.setText(" ");
+        ed = (EditText) findViewById(R.id.editex);
+        String edtx = String.valueOf(ed.getText());
+        tx.setText(edtx);
 
     }
 
