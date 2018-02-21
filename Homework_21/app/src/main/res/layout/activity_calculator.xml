@@ -6,4 +6,23 @@
     android:layout_height="match_parent"
     tools:context="homework.softdev.sirawich.calculator.Calculator">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="122dp"
+        android:background="#fff"
+        android:id="@+id/screen"
+        android:hint="Number Here"
+        android:textSize="30sp"
+        android:gravity="bottom"
+        android:textAlignment="textEnd"
+        app:layout_constraintBottom_toTopOf="@+id/ac"/>
+    <TextView
+        android:layout_width="72dp"
+        android:layout_height="63dp"
+        android:background="#B3E5FC"
+        android:text="AC"
+       android:gravity="center"
+        android:id="@+id/ac"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/screen" />
 </android.support.constraint.ConstraintLayout>
