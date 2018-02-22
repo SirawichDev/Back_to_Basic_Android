@@ -9,8 +9,8 @@ import android.widget.TextView;
 
 public class Calculator extends AppCompatActivity {
    private Button one,two,three,four,five,six,seven,eight,nine,zero;
-   private Button clear,add;
-   float val;
+   private Button clear,add,equal;
+   float val,val2;
    boolean wantadd;
     TextView screen;
     @Override
@@ -30,6 +30,7 @@ public class Calculator extends AppCompatActivity {
         zero = (Button)findViewById(R.id.zero);
         clear = (Button)findViewById(R.id.ac);
         add = (Button)findViewById(R.id.plus);
+        equal = (Button)findViewById(R.id.equal);
         one.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View view) {
@@ -119,6 +120,16 @@ public class Calculator extends AppCompatActivity {
                 int tmp = 2;
                 screen.setText("");
             }
+        });
+        equal.setOnClickListener(new Button.OnClickListener(){
+           @Override
+            public void onClick(View v){
+               val2 = Float.parseFloat(screen.getText()+"");
+               if(wantadd==true){
+                   screen.setText(val+val2+"");
+                   wantadd=false;
+               }
+           }
         });
     }
 
