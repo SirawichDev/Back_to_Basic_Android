@@ -8,7 +8,7 @@
     android:layout_centerHorizontal="true"
     tools:context="homework.softdev.sirawich.calculator.Calculator">
 
-    <TextView
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="122dp"
         android:background="#B2EBF2"
@@ -234,7 +234,7 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/border_btn"
             app:layout_constraintTop_toBottomOf="@+id/row4"
-            android:id="@+id/equal"
+            android:id="@+id/zero"
             android:text="0"
             android:gravity="center"
             />
@@ -250,7 +250,7 @@
         android:textSize="20sp"
         android:id="@+id/dot"
         app:layout_constraintTop_toBottomOf="@+id/row4"
-        app:layout_constraintLeft_toRightOf="@+id/equal"
+        app:layout_constraintLeft_toRightOf="@+id/zero"
         />
     <Button
 
@@ -260,6 +260,7 @@
         android:layout_marginLeft="7dp"
         android:background="@drawable/round_horizental"
         android:gravity="center"
+        android:id="@+id/equal"
         android:text="="
         app:layout_constraintTop_toBottomOf="@+id/row4"
         app:layout_constraintLeft_toRightOf="@+id/dot"
