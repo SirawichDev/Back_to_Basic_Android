@@ -15,7 +15,7 @@
         android:textSize="30sp"
         android:gravity="bottom"
         android:textAlignment="textEnd"
-        app:layout_constraintBottom_toTopOf="@+id/ac"/>
+       />
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
