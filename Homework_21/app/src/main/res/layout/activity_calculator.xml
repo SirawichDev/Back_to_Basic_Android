@@ -233,20 +233,41 @@
             />
 
     </android.support.constraint.ConstraintLayout>
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/row5"
-        app:layout_constraintTop_toBottomOf="@+id/row4"
-        android:layout_marginTop="7dp"
-        android:layout_marginLeft="7dp"
-        >
+
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="190dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/border_btn"
+            app:layout_constraintTop_toBottomOf="@+id/row4"
+            android:id="@+id/equal"
             android:text="0"
             android:gravity="center"
             />
-    </android.support.constraint.ConstraintLayout>
+    <Button
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="7dp"
+        android:background="@drawable/round"
+        android:gravity="center"
+        android:text="."
+        android:id="@+id/dot"
+        app:layout_constraintTop_toBottomOf="@+id/row4"
+        app:layout_constraintLeft_toRightOf="@+id/equal"
+        />
+    <Button
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="7dp"
+        android:background="@drawable/round_horizental"
+        android:gravity="center"
+        android:text="="
+        app:layout_constraintTop_toBottomOf="@+id/row4"
+        app:layout_constraintLeft_toRightOf="@+id/dot"
+        />
+
 </android.support.constraint.ConstraintLayout>
