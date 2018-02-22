@@ -9,15 +9,15 @@
     tools:context="homework.softdev.sirawich.calculator.Calculator">
 
     <EditText
+        android:id="@+id/screen"
         android:layout_width="match_parent"
         android:layout_height="122dp"
         android:background="#B2EBF2"
-        android:id="@+id/screen"
-        android:hint="Number Here"
-        android:textSize="30sp"
         android:gravity="bottom"
+        android:hint="Number Here"
         android:textAlignment="textEnd"
-       />
+        android:textSize="30sp"
+         />
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
@@ -223,6 +223,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/round_horizental"
             android:text="+"
+            android:id="@+id/plus"
             android:gravity="center"
             android:layout_marginLeft="7dp"
             app:layout_constraintLeft_toRightOf="@+id/three"
