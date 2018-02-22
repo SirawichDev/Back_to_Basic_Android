@@ -233,4 +233,20 @@
             />
 
     </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/row5"
+        app:layout_constraintTop_toBottomOf="@+id/row4"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="7dp"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_btn"
+            android:text="0"
+            android:gravity="center"
+            />
+    </android.support.constraint.ConstraintLayout>
 </android.support.constraint.ConstraintLayout>
