@@ -9,6 +9,9 @@ import android.widget.TextView;
 
 public class Calculator extends AppCompatActivity {
    private Button one,two,three,four,five,six,seven,eight,nine,zero;
+   private Button clear,add,equal;
+   float val,val2;
+   boolean wantadd;
     TextView screen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +28,9 @@ public class Calculator extends AppCompatActivity {
         eight = (Button)findViewById(R.id.eight);
         nine = (Button)findViewById(R.id.nine);
         zero = (Button)findViewById(R.id.zero);
-
+        clear = (Button)findViewById(R.id.ac);
+        add = (Button)findViewById(R.id.plus);
+        equal = (Button)findViewById(R.id.equal);
         one.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View view) {
@@ -95,6 +100,36 @@ public class Calculator extends AppCompatActivity {
                 int tmp = 2;
                 screen.setText(screen.getText()+"0");
             }
+        });
+        add.setOnClickListener(new Button.OnClickListener(){
+           @Override
+            public void onClick(View v){
+               if(screen==null){
+                   screen.setText("");
+               }
+               else{
+                    val = Float.parseFloat(screen.getText()+"");
+                    wantadd=true;
+                    screen.setText(null);
+               }
+           }
+        });
+        clear.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                int tmp = 2;
+                screen.setText("");
+            }
+        });
+        equal.setOnClickListener(new Button.OnClickListener(){
+           @Override
+            public void onClick(View v){
+               val2 = Float.parseFloat(screen.getText()+"");
+               if(wantadd==true){
+                   screen.setText(val+val2+"");
+                   wantadd=false;
+               }
+           }
         });
     }
 
