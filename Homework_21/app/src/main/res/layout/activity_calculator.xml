@@ -23,8 +23,7 @@
         android:layout_marginLeft="5dp"
         android:id="@+id/row1"
         android:layout_marginTop="20dp"
-        app:layout_constraintRight_toLeftOf="parent"
-        app:layout_constraintLeft_toRightOf="parent"
+
 
         app:layout_constraintTop_toBottomOf="@+id/screen">
     <Button
@@ -36,8 +35,7 @@
        android:gravity="center"
         android:id="@+id/ac"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/sev"
-        app:layout_constraintTop_toBottomOf="@+id/screen" />
+      />
 
     <Button
         android:id="@+id/neg"
@@ -196,8 +194,8 @@
         android:id="@+id/row4"
         android:layout_marginTop="7dp"
         android:layout_marginLeft="7dp"
-        app:layout_constraintLeft_toRightof="parent"
-        app:layout_constraintRight_toLeftof="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/row3">
         <Button
             android:layout_width="wrap_content"
@@ -205,7 +203,6 @@
             android:background="@drawable/round"
             android:text="1"
             android:id="@+id/one"
-            app:layout_constraintRight_toLeftof="@+id/two"
             android:gravity="center" />
         <Button
             android:layout_width="wrap_content"
