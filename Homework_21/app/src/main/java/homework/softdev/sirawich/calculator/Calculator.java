@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class Calculator extends AppCompatActivity {
-
+    int i=0;
    private Button one,two,three,four,five,six,seven,eight,nine,zero;
    private Button clear,add,equal,sub,cross,div,mod,neg,dot;
    double val,val2;
@@ -38,6 +38,7 @@ public class Calculator extends AppCompatActivity {
         mod = (Button)findViewById(R.id.mod);
         neg = (Button)findViewById(R.id.neg);
         dot = (Button)findViewById(R.id.dot);
+
         screen.setText("0");
         first=true;
         one.setOnClickListener(new Button.OnClickListener(){
@@ -244,19 +245,29 @@ public class Calculator extends AppCompatActivity {
 
             }
         });
+
         neg.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v) {
                 if (screen == null) {
                     screen.setText("");
 
-                } else {
+                } else if(i % 2 == 0) {
+
                     val = Float.parseFloat(screen.getText() + "");
                     wantneg = true;
-
-                    screen.setText("-"+Double.valueOf(val).intValue() );
+                    screen.setText("-" + Double.valueOf(val).intValue());
+                    i++;
                 }
-            }
+                    else{
+
+                        wantneg = true;
+                        screen.setText("" + Double.valueOf(val).intValue());
+                        val = Float.parseFloat(screen.getText() + "");
+                        i++;
+                    }
+                }
+
         });
         clear.setOnClickListener(new Button.OnClickListener(){
             @Override
