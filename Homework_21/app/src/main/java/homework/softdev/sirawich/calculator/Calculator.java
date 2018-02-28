@@ -8,10 +8,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class Calculator extends AppCompatActivity {
+
    private Button one,two,three,four,five,six,seven,eight,nine,zero;
-   private Button clear,add,equal;
-   float val,val2;
-   boolean wantadd;
+   private Button clear,add,equal,sub,cross,div,mod,neg,dot;
+   double val,val2;
+   boolean wantadd,wantsub,wantcross,first,wantdiv,wantmod,wantneg;
     TextView screen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,9 +32,21 @@ public class Calculator extends AppCompatActivity {
         clear = (Button)findViewById(R.id.ac);
         add = (Button)findViewById(R.id.plus);
         equal = (Button)findViewById(R.id.equal);
+        sub = (Button)findViewById(R.id.sub);
+        cross = (Button)findViewById(R.id.cross);
+        div = (Button)findViewById(R.id.divide);
+        mod = (Button)findViewById(R.id.mod);
+        neg = (Button)findViewById(R.id.neg);
+        dot = (Button)findViewById(R.id.dot);
+        screen.setText("0");
+        first=true;
         one.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View view) {
+                if(first==true) {
+                    screen.setText("");
+                    first=false;
+                }
                 int tmp = 1;
                 screen.setText(screen.getText()+"1");
             }
@@ -41,6 +54,10 @@ public class Calculator extends AppCompatActivity {
         two.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View view) {
+                if(first==true) {
+                    screen.setText("");
+                    first=false;
+                }
                 int tmp = 2;
                 screen.setText(screen.getText()+"2");
             }
@@ -48,6 +65,10 @@ public class Calculator extends AppCompatActivity {
         three.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View view) {
+                if(first==true) {
+                    screen.setText("");
+                    first=false;
+                }
                 int tmp = 2;
                 screen.setText(screen.getText()+"3");
             }
@@ -55,6 +76,10 @@ public class Calculator extends AppCompatActivity {
         four.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View view) {
+                if(first==true) {
+                    screen.setText("");
+                    first=false;
+                }
                 int tmp = 2;
                 screen.setText(screen.getText()+"4");
             }
@@ -62,6 +87,10 @@ public class Calculator extends AppCompatActivity {
         five.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View view) {
+                if(first==true) {
+                    screen.setText("");
+                    first=false;
+                }
                 int tmp = 2;
                 screen.setText(screen.getText()+"5");
             }
@@ -69,41 +98,62 @@ public class Calculator extends AppCompatActivity {
         six.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View view) {
-                int tmp = 2;
+                if(first==true) {
+                    screen.setText("");
+                    first=false;
+                }
+
                 screen.setText(screen.getText()+"6");
             }
         });
         seven.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View view) {
-                int tmp = 2;
+                if(first==true) {
+                    screen.setText("");
+                    first=false;
+                }
+
                 screen.setText(screen.getText()+"7");
             }
         });
         eight.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View view) {
-                int tmp = 2;
+                if(first==true) {
+                    screen.setText("");
+                    first=false;
+                }
+
                 screen.setText(screen.getText()+"8");
             }
         });
         nine.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View view) {
-                int tmp = 2;
+                if(first==true) {
+                    screen.setText("");
+                    first=false;
+                }
+
                 screen.setText(screen.getText()+"9");
             }
         });
         zero.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View view) {
-                int tmp = 2;
+                if(first==true) {
+                    screen.setText("");
+                    first=false;
+                }
+
                 screen.setText(screen.getText()+"0");
             }
         });
         add.setOnClickListener(new Button.OnClickListener(){
            @Override
             public void onClick(View v){
+
                if(screen==null){
                    screen.setText("");
                }
@@ -114,21 +164,151 @@ public class Calculator extends AppCompatActivity {
                }
            }
         });
+        sub.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(screen==null){
+                    screen.setText("");
+                }
+                else{
+                    val = Float.parseFloat(screen.getText()+"");
+                    wantsub=true;
+                    screen.setText(null);
+                }
+            }
+        });
+        cross.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(screen==null){
+                    screen.setText("");
+                }
+                else if(equal!=null){
+                    val = Float.parseFloat(screen.getText()+"");
+                    wantcross=true;
+                    screen.setText(null);
+                }else{
+                    val = Float.parseFloat(screen.getText()+"");
+                    wantcross=true;
+                    screen.setText(null);
+                }
+
+            }
+        });
+        div.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(screen==null){
+                    screen.setText("");
+                }
+                else if(equal!=null){
+                    val = Float.parseFloat(screen.getText()+"");
+                    wantdiv=true;
+                    screen.setText(null);
+                }else{
+                    val = Float.parseFloat(screen.getText()+"");
+                    wantdiv=true;
+                    screen.setText(null);
+                }
+
+            }
+        });
+        dot.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(screen==null){
+                    screen.setText("");
+                }else{
+                    val = Float.parseFloat(screen.getText()+"");
+                    wantneg=true;
+                    screen.setText(Double.valueOf(val).intValue() +".");
+                }
+
+            }
+        });
+        mod.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(screen==null){
+                    screen.setText("");
+                }
+                else if(equal!=null){
+                    val = Float.parseFloat(screen.getText()+"");
+                    wantmod=true;
+                    screen.setText(null);
+                }else{
+                    val = Float.parseFloat(screen.getText()+"");
+                    wantmod=true;
+                    screen.setText(null);
+                }
+
+            }
+        });
+        neg.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                if (screen == null) {
+                    screen.setText("");
+
+                } else {
+                    val = Float.parseFloat(screen.getText() + "");
+                    wantneg = true;
+
+                    screen.setText("-"+Double.valueOf(val).intValue() );
+                }
+            }
+        });
         clear.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View view) {
                 int tmp = 2;
-                screen.setText("");
+                if(first==false) {
+                    screen.setText("");
+                    first=true;
+                }
+                screen.setText("0");
             }
         });
+
         equal.setOnClickListener(new Button.OnClickListener(){
            @Override
             public void onClick(View v){
-               val2 = Float.parseFloat(screen.getText()+"");
-               if(wantadd==true){
-                   screen.setText(val+val2+"");
-                   wantadd=false;
+               val2 = Double.parseDouble(screen.getText()+"");
+               if(wantadd==true) {
+
+                       screen.setText((val + val2 + ""));
+                       wantadd = false;
+
                }
+               if(wantsub==true){
+                   if(wantneg==true){
+                       screen.setText(String.format("%.2f", -val-val2)+"");
+                       wantsub=false;
+                   }
+                   screen.setText(val-val2+"");
+                   wantsub=false;
+               }
+               if(wantcross==true) {
+                   if (wantneg == true) {
+                       screen.setText(String.format("%.2f", -val * val2) + "");
+                       wantcross = false;
+                   }
+                   screen.setText(val * val2 + "");
+                   wantcross = false;
+               }
+               if(wantdiv==true) {
+                   if (wantneg == true) {
+                       screen.setText(String.format("%.1f", -val / val2) + "");
+                       wantdiv = false;
+                   }
+                   screen.setText(val/val2+"");
+                   wantdiv = false;
+               }
+               if(wantmod==true){
+                   screen.setText(String.format("%.2f", val%val2)+"");
+                   wantmod = false;
+               }
+
            }
         });
     }
