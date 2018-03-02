@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="116a3b7e-8631-4946-8158-bf778fdb199a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Homework_21/app/src/main/res/layout/activity_calculator.xml" afterPath="$PROJECT_DIR$/Homework_21/app/src/main/res/layout/activity_calculator.xml" />
-    </list>
+    <list default="true" id="116a3b7e-8631-4946-8158-bf778fdb199a" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +38,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -54,10 +53,9 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">

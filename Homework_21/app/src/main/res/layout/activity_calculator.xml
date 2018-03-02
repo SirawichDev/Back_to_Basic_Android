@@ -24,7 +24,7 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:layout_marginLeft="20dp"
         android:id="@+id/row1"
         android:layout_marginTop="20dp"
         app:layout_constraintTop_toBottomOf="@+id/screen">
@@ -79,7 +79,7 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:layout_marginLeft="20dp"
         android:id="@+id/row2"
         android:layout_marginTop="7dp"
 
@@ -136,7 +136,7 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:layout_marginLeft="20dp"
         android:id="@+id/row3"
         android:layout_marginTop="7dp"
         app:layout_constraintRight_toLeftOf="parent"
@@ -191,7 +191,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/row4"
         android:layout_marginTop="7dp"
-
+        android:layout_marginLeft="20dp"
         app:layout_constraintLeft_toRightOf="parent"
         app:layout_constraintRight_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/row3">
@@ -231,9 +231,22 @@
             app:layout_constraintLeft_toRightOf="@+id/three"
             />
     </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/row5"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/row4">
+        >
         <Button
+            app:layout_goneMarginTop="7dp"
             android:layout_width="175dp"
             android:layout_height="80dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="1dp"
             android:background="@drawable/border_btn"
             app:layout_constraintTop_toBottomOf="@+id/row4"
@@ -242,6 +255,7 @@
             android:gravity="center"
             />
     <Button
+        app:layout_goneMarginTop="7dp"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -256,6 +270,7 @@
         app:layout_constraintLeft_toRightOf="@+id/zero"
         />
     <Button
+        app:layout_goneMarginTop="7dp"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -268,5 +283,6 @@
         app:layout_constraintTop_toBottomOf="@+id/row4"
         app:layout_constraintLeft_toRightOf="@+id/dot"
         />
+</android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>
