@@ -45,9 +45,12 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="test"
+        android:text="btw1"
+
+        android:backgroundTint="#827717"
         android:id="@+id/test"
         android:textAllCaps="false"
+        android:backgroundTintMode="src_in"
         android:shadowColor="#222"
         app:layout_constraintTop_toBottomOf="@id/top"
         app:layout_constraintBottom_toTopOf="@id/center_layout"
@@ -59,8 +62,10 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="test2"
+        android:text="btw2"
         android:textAllCaps="false"
+        android:backgroundTint="#A7FFEB"
+        android:backgroundTintMode="src_over"
         android:id="@+id/test2"
         app:layout_constraintTop_toBottomOf="@+id/top"
         app:layout_constraintBottom_toTopOf="@+id/center_layout"
