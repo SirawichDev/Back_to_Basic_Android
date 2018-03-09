@@ -191,17 +191,20 @@
             android:layout_height="wrap_content"
             android:background="#E1BEE7"
             android:id="@+id/g1"
+            android:onClick="rgclick"
             android:text="Java"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:background="#FFEB3B"
             android:id="@+id/g2"
+            android:onClick="rgclick"
             android:layout_height="wrap_content"
             android:text="Python"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/g3"
+            android:onClick="rgclick"
             android:background="#C5E1A5"
             android:text="C++"/>
 

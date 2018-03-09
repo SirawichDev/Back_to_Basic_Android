@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+
+    tools:context="me.softdev.sirawich.cody.Linear_Layout">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_weight="0.5"
+        android:id="@+id/oval"
+        android:background="@drawable/oval"
+        android:textAllCaps="false"
+        android:text="oval"/>
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="100dp"
+        android:layout_weight="0.5"
+        android:layout_height="100dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/ring"
+        android:text="ring+gradient"
+
+        android:textAllCaps="false" />
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/btn3"
+        android:layout_weight="0.5"
+        android:background="@drawable/regtangle"
+        android:textAllCaps="false"
+        android:text="regtangle"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="20dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/line"
+            android:text="Line"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:textAllCaps="false"
+            android:background="@drawable/reg_stroke"
+            android:text="regtang+stroke"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:textAllCaps="false"
+        android:background="@drawable/oval_stroke_dashgap"
+        android:textColor="#F0F4C3"
+        android:text="circle_storke_dashGap"/>
+</LinearLayout>
+</LinearLayout>
