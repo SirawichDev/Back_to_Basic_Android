@@ -4,14 +4,17 @@ import android.app.Application;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     CheckBox cb1,cb2;
     RadioButton rad1;
+    RadioGroup rg1;
     Toast t1,t2;
     public static final String TAG = "From CheckBox 1";
     public static final String TAG2 = "From CheckBox 2";
@@ -58,6 +61,34 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 t1 = Toast.makeText(getApplicationContext(),"Radio once Clicked",Toast.LENGTH_SHORT);
                 t1.show();
+            }
+        });
+        rg1 = (RadioGroup)findViewById(R.id.Rg1);
+        rg1.setOnClickListener(new RadioButton.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                boolean Checked = ((RadioButton) view).isChecked();
+                switch (view.getId()){
+                    case R.id.g1:
+                        if(Checked)
+                            t1 = Toast.makeText(getApplicationContext(),"You choose Java!",Toast.LENGTH_SHORT);
+                            t1.show();
+                            break;
+                        
+                    case R.id.g2:
+                        if(Checked){
+                            t1 = Toast.makeText(getApplicationContext(),"You choose Python!",Toast.LENGTH_SHORT);
+                            t1.show();
+                            break;
+                        }
+                    case R.id.g3:
+                        if(Checked){
+                            t1 = Toast.makeText(getApplicationContext(),"You choose C++!",Toast.LENGTH_SHORT);
+                            t1.show();
+                            break;
+                        }
+                }
             }
         });
         }
