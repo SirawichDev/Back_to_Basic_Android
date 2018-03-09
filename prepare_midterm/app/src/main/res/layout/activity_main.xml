@@ -4,16 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="20dp"
+    android:layout_marginTop="50dp"
     tools:context="me.softdev.sirawich.cody.MainActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Head"
+        android:text="Constraint Layout"
+        android:textColorHint="#8BC34A"
+        android:gravity="center"
+
+       android:textColor="#FFFF00"
+        android:textSize="30dp"
+        android:textAllCaps="true"
+        android:background="#8BC34A"
+     />
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/Head"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:id="@+id/top">
+
 <Button
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -139,4 +154,15 @@
         android:id="@+id/ck2"
         android:text="Check_2"
         app:layout_constraintTop_toBottomOf="@+id/ck1"/>
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/center_layout"
+        android:text="rad_1"
+        android:id="@+id/rad1"
+        android:background="#82B1FF"
+        android:layout_marginTop="30dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/ck1"
+        />
 </android.support.constraint.ConstraintLayout>
