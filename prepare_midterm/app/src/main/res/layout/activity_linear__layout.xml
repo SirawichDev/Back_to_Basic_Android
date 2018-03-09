@@ -11,6 +11,10 @@
     android:layout_marginRight="20dp"
 
     tools:context="me.softdev.sirawich.cody.Linear_Layout">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
     <Button
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -30,9 +34,23 @@
 
         android:textAllCaps="false" />
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:id="@+id/btn3"
+        android:background="@drawable/regtangle"
         android:textAllCaps="false"
-        android:text="btn1"/>
+        android:text="regtangle"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background=""
+        android:layout_marginTop="30dp">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Line"/>
+
+    </LinearLayout>
 </LinearLayout>
