@@ -133,7 +133,10 @@
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#B388FF"
+        android:layout_marginTop="20dp"
+        android:background="#2196F3"
+        android:backgroundTintMode="multiply"
+
         android:text="Check_2"
         app:layout_constraintTop_toBottomOf="@+id/ck1"/>
 </android.support.constraint.ConstraintLayout>
