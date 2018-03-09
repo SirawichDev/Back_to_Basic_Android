@@ -5,26 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
+
     android:layout_marginTop="20dp"
     android:layout_marginLeft="20dp"
     android:layout_marginRight="20dp"
 
     tools:context="me.softdev.sirawich.cody.Linear_Layout">
     <Button
-        android:layout_gravity="left"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:id="@+id/btn1"
-
+        android:id="@+id/oval"
         android:background="@drawable/oval"
+
         android:textAllCaps="false"
-        android:text="btn1"/>
+        android:text="oval"/>
+
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/btn2"
-        android:textAllCaps="false"
-        android:text="btn1"/>
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/ring"
+        android:text="ring"
+
+        android:textAllCaps="false" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
