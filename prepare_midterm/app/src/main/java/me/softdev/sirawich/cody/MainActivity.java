@@ -22,76 +22,72 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        cb1 = (CheckBox)findViewById(R.id.ck1);
+        cb1 = (CheckBox) findViewById(R.id.ck1);
         cb1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton cb1, boolean b) {
-                if(cb1.isChecked()) {
+                if (cb1.isChecked()) {
                     Log.i(TAG, "onCheckedChanged: Click me ");
-                    t1 = Toast.makeText(getApplicationContext(),"Clicked",Toast.LENGTH_SHORT);
+                    t1 = Toast.makeText(getApplicationContext(), "Clicked", Toast.LENGTH_SHORT);
                     t1.show();
                     return;
-                }else
+                } else
 
                     Log.i(TAG, "onCheckedChanged: UnClick me ");
-                t1 = Toast.makeText(getApplicationContext(),"UnClicked",Toast.LENGTH_SHORT);
+                t1 = Toast.makeText(getApplicationContext(), "UnClicked", Toast.LENGTH_SHORT);
                 t1.show();
             }
         });
 
-        cb2 = (CheckBox)findViewById(R.id.ck2);
+        cb2 = (CheckBox) findViewById(R.id.ck2);
         cb2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(CompoundButton cb2,boolean c) {
+            public void onCheckedChanged(CompoundButton cb2, boolean c) {
                 if (c == true) {
-                    Log.i(TAG2,"Clicked me");
+                    Log.i(TAG2, "Clicked me");
                     t2 = Toast.makeText(getApplicationContext(), "Clicked", Toast.LENGTH_SHORT);
                     t2.show();
                     return;
                 } else
-                    Log.i(TAG2,"UnClicked me");
-                    t2 = Toast.makeText(getApplicationContext(), "UnClicked", Toast.LENGTH_SHORT);
+                    Log.i(TAG2, "UnClicked me");
+                t2 = Toast.makeText(getApplicationContext(), "UnClicked", Toast.LENGTH_SHORT);
                 t2.show();
 
             }
         });
-        rad1 = (RadioButton)findViewById(R.id.rad1);
+        rad1 = (RadioButton) findViewById(R.id.rad1);
         rad1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                t1 = Toast.makeText(getApplicationContext(),"Radio once Clicked",Toast.LENGTH_SHORT);
+                t1 = Toast.makeText(getApplicationContext(), "Radio once Clicked", Toast.LENGTH_SHORT);
                 t1.show();
             }
         });
-        rg1 = (RadioGroup)findViewById(R.id.Rg1);
-        rg1.setOnClickListener(new RadioButton.OnClickListener(){
-
-            @Override
-            public void onClick(View view) {
-                boolean Checked = ((RadioButton) view).isChecked();
-                switch (view.getId()){
-                    case R.id.g1:
-                        if(Checked)
-                            t1 = Toast.makeText(getApplicationContext(),"You choose Java!",Toast.LENGTH_SHORT);
-                            t1.show();
-                            break;
-                        
-                    case R.id.g2:
-                        if(Checked){
-                            t1 = Toast.makeText(getApplicationContext(),"You choose Python!",Toast.LENGTH_SHORT);
-                            t1.show();
-                            break;
-                        }
-                    case R.id.g3:
-                        if(Checked){
-                            t1 = Toast.makeText(getApplicationContext(),"You choose C++!",Toast.LENGTH_SHORT);
-                            t1.show();
-                            break;
-                        }
-                }
-            }
-        });
-        }
-
     }
+
+    public void rgclick(View view) {
+
+        boolean Checked = ((RadioButton) view).isChecked();
+        switch (view.getId()) {
+            case R.id.g1:
+                if (Checked)
+                    t1 = Toast.makeText(getApplicationContext(), "You choose Java!", Toast.LENGTH_SHORT);
+                t1.show();
+                break;
+
+            case R.id.g2:
+                if (Checked)
+                    t1 = Toast.makeText(getApplicationContext(), "You choose Python!", Toast.LENGTH_SHORT);
+                    t1.show();
+                    break;
+
+            case R.id.g3:
+                if (Checked)
+                    t1 = Toast.makeText(getApplicationContext(), "You choose C++!", Toast.LENGTH_SHORT);
+                    t1.show();
+                    break;
+
+        }
+    }
+}
 
