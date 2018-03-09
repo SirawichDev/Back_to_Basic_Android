@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:orientation="vertical"
 
     android:layout_marginTop="20dp"
     android:layout_marginLeft="20dp"
@@ -14,19 +14,21 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:orientation="horizontal">
     <Button
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_weight="0.5"
         android:id="@+id/oval"
         android:background="@drawable/oval"
-
         android:textAllCaps="false"
         android:text="oval"/>
 
     <Button
         android:id="@+id/btn2"
         android:layout_width="100dp"
+        android:layout_weight="0.5"
         android:layout_height="100dp"
         android:layout_marginHorizontal="20dp"
         android:background="@drawable/ring"
@@ -37,6 +39,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:id="@+id/btn3"
+        android:layout_weight="0.5"
         android:background="@drawable/regtangle"
         android:textAllCaps="false"
         android:text="regtangle"/>
@@ -45,12 +48,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background=""
-        android:layout_marginTop="30dp">
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="20dp">
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/line"
             android:text="Line"/>
-
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:textAllCaps="false"
+            android:background="@drawable/reg_stroke"
+            android:text="regtang+stroke"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="circle+storke->Do"/>
     </LinearLayout>
 </LinearLayout>
