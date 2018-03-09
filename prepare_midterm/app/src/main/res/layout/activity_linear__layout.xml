@@ -32,7 +32,7 @@
         android:layout_height="100dp"
         android:layout_marginHorizontal="20dp"
         android:background="@drawable/ring"
-        android:text="ring"
+        android:text="ring+gradient"
 
         android:textAllCaps="false" />
     <Button
