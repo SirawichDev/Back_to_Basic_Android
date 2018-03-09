@@ -6,7 +6,7 @@
     <corners android:radius="90dp"/>
     <stroke
         android:color="#FF1744"
-        android:width="20dp"
+        android:width="10dp"
         android:dashWidth="32dp"
         android:dashGap="10dp"/>
     <gradient android:useLevel="false"
