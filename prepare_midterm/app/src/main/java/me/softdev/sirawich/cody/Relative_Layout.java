@@ -22,4 +22,8 @@ public class Relative_Layout extends AppCompatActivity {
             }
         });
     }
+    public void bt2click(View view){
+        Toast t = Toast.makeText(getApplicationContext(), "btn2 clicked", Toast.LENGTH_SHORT);
+        t.show();
+    }
 }
