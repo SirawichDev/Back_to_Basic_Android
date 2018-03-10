@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="h"
+    android:orientation="vertical"
     tools:context="me.softdev.sirawich.cody.Relative_Layout_round1">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -89,11 +89,17 @@
             android:textSize="20sp"
             android:layout_alignParentLeft="true"
           />
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/sex"
+            android:id="@+id/radg1"
+            android:orientation="horizontal">
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/sex"
-
+            android:layout_marginLeft="10dp"
             android:id="@+id/male"
             android:text="Male"/>
 
@@ -103,11 +109,12 @@
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/male"
             android:text="Female" />
-
+        </RadioGroup>
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/re5"
         android:layout_below="@+id/re4">
         <TextView
             android:layout_width="wrap_content"
@@ -118,24 +125,62 @@
         <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/rg3"
             android:orientation="vertical"
             android:layout_toRightOf="@+id/interest">
-            <RadioButton
+            <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="JAVA"/>
-            <RadioButton
+            <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="C++"/>
-            <RadioButton
+            <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Python"/>
 
         </RadioGroup>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rg2"
+            android:layout_toRightOf="@+id/rg3"
+            android:orientation="vertical">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/php"
+                android:text="PHP"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/js"
+                android:text="JAVASCRIPT" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/r"
+                android:text="R"/>
+
+        </RadioGroup>
 
     </RelativeLayout>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/subm"
+        android:id="@+id/ff"
+        android:text="test"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:id="@+id/subm"
+        android:text="Submit"
+        android:onClick="showClick"
+        android:layout_below="@+id/re5"/>
 
 </RelativeLayout>
 

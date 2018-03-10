@@ -19,7 +19,8 @@
         <activity android:name=".Relative_Layout" />
         <activity android:name=".Linear_Layout" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".LinearLayout_Round1"></activity>
+        <activity android:name=".LinearLayout_Round1" />
+        <activity android:name=".Constraint_layout_round1"></activity>
     </application>
 
 </manifest>
