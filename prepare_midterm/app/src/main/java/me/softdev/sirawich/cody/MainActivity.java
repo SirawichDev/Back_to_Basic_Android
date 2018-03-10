@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     CheckBox cb1,cb2;
     RadioButton rad1;
     RadioGroup rg1;
+    Button bt2;
     Toast t1,t2;
     public static final String TAG = "From CheckBox 1";
     public static final String TAG2 = "From CheckBox 2";
@@ -88,6 +90,11 @@ public class MainActivity extends AppCompatActivity {
                     break;
 
         }
+    }
+
+    public void clickme(View view){
+        t1 = Toast.makeText(getApplicationContext(), "You Click btn2 ++!", Toast.LENGTH_SHORT);
+        t1.show();
     }
 }
 

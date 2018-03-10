@@ -123,9 +123,10 @@
             android:textAllCaps="false" />
 
         <Button
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/bt8"
+            android:layout_alignParentRight="true"
             android:text="btn9"
             android:textAllCaps="false" />
     </RelativeLayout>
