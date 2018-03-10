@@ -6,88 +6,92 @@
     android:layout_height="match_parent"
     android:layout_marginTop="50dp"
     tools:context="me.softdev.sirawich.cody.MainActivity">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/Head"
-        android:text="Constraint Layout"
-        android:textColorHint="#8BC34A"
-        android:gravity="center"
 
-       android:textColor="#FFFF00"
-        android:textSize="30dp"
-        android:textAllCaps="true"
-        android:background="#8BC34A"
-     />
-    <android.support.constraint.ConstraintLayout
+    <TextView
+        android:id="@+id/Head"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        app:layout_constraintTop_toBottomOf="@+id/Head"
-        android:layout_marginTop="20dp"
+        android:background="#8BC34A"
+        android:gravity="center"
+        android:text="Constraint Layout"
+
+        android:textAllCaps="true"
+        android:textColor="#FFFF00"
+        android:textColorHint="#8BC34A"
+        android:textSize="30dp" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:id="@+id/top">
-
-<Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="#1E88E5"
-    android:id="@+id/btn1"
-    android:textAllCaps="false"
-    android:text="top left"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="top middle"
-        android:background="#7E57C2"
+        android:layout_marginTop="20dp"
         android:textAllCaps="false"
-        android:id="@+id/btn2"
-        app:layout_constraintRight_toLeftOf="@+id/btn3"
-        app:layout_constraintLeft_toRightOf="@+id/btn1"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="top right"
-        android:textAllCaps="false"
-        android:id="@+id/btn3"
-        android:background="#FF6F00"
+        app:layout_constraintTop_toBottomOf="@+id/Head">
 
-        app:layout_constraintRight_toRightOf="parent"/>
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#1E88E5"
+            android:text="top left"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#7E57C2"
+            android:text="top middle"
+            android:textAllCaps="false"
+            app:layout_constraintLeft_toRightOf="@+id/btn1"
+            app:layout_constraintRight_toLeftOf="@+id/btn3" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FF6F00"
+            android:text="top right"
+            android:textAllCaps="false"
+
+            app:layout_constraintRight_toRightOf="parent" />
 
     </android.support.constraint.ConstraintLayout>
 
     <Button
+        android:id="@+id/test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="btw1"
 
         android:backgroundTint="#827717"
-        android:id="@+id/test"
-        android:textAllCaps="false"
         android:backgroundTintMode="src_in"
         android:shadowColor="#222"
-        app:layout_constraintTop_toBottomOf="@id/top"
+        android:text="btw1"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toTopOf="@id/center_layout"
-        app:layout_constraintRight_toLeftOf="@id/test2"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/test2"
+        app:layout_constraintTop_toBottomOf="@id/top"
 
 
- />
+        />
+
     <Button
+        android:id="@+id/test2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="btw2"
-        android:textAllCaps="false"
         android:backgroundTint="#A7FFEB"
         android:backgroundTintMode="src_over"
-        android:id="@+id/test2"
-        app:layout_constraintTop_toBottomOf="@+id/top"
+        android:text="btw2"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toTopOf="@+id/center_layout"
         app:layout_constraintLeft_toRightOf="@id/test"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top"
 
- />
+        />
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/center_layout"
@@ -135,78 +139,84 @@
             app:layout_constraintTop_toTopOf="parent" />
 
     </android.support.constraint.ConstraintLayout>
+
     <CheckBox
+        android:id="@+id/ck1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:text="Check_1"
-        android:id="@+id/ck1"
-        android:background="#64DD17"
         android:layout_marginTop="30dp"
-        app:layout_constraintTop_toBottomOf="@id/center_layout"
-        />
+        android:background="#64DD17"
+        android:text="Check_1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/center_layout" />
+
     <CheckBox
+        android:id="@+id/ck2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="#2196F3"
         android:backgroundTintMode="multiply"
-        android:id="@+id/ck2"
         android:text="Check_2"
-        app:layout_constraintTop_toBottomOf="@+id/ck1"/>
+        app:layout_constraintTop_toBottomOf="@+id/ck1" />
+
     <RadioButton
-        app:layout_constraintHorizontal_bias="0.4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/center_layout"
-        android:text="rad_1"
         android:id="@+id/rad1"
-        android:background="#82B1FF"
-        android:layout_marginTop="30dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/ck1"
-        />
-    <TextView
-        android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/rad1"
+        android:layout_marginTop="30dp"
+        android:background="#82B1FF"
+        android:text="rad_1"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintLeft_toRightOf="@id/ck1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/center_layout" />
+
+    <TextView
+        android:id="@+id/radheader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#80DEEA"
         android:text="RadioGroup"
         android:textSize="15sp"
         app:layout_constraintHorizontal_bias="0.42"
-        android:id="@+id/radheader"
-        android:background="#80DEEA"
+        app:layout_constraintLeft_toRightOf="@id/ck1"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/ck1"/>
+        app:layout_constraintTop_toBottomOf="@id/rad1" />
+
     <RadioGroup
+        android:id="@+id/Rg1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/radheader"
+        android:orientation="horizontal"
         app:layout_constraintLeft_toRightOf="@+id/ck2"
-        android:id="@+id/Rg1"
         app:layout_constraintRight_toRightOf="parent"
-        android:orientation="horizontal">
+        app:layout_constraintTop_toBottomOf="@+id/radheader">
+
         <RadioButton
+            android:id="@+id/g1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#E1BEE7"
-            android:id="@+id/g1"
             android:onClick="rgclick"
-            android:text="Java"/>
+            android:text="Java" />
+
         <RadioButton
-            android:layout_width="wrap_content"
-            android:background="#FFEB3B"
             android:id="@+id/g2"
-            android:onClick="rgclick"
-            android:layout_height="wrap_content"
-            android:text="Python"/>
-        <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/g3"
+            android:background="#FFEB3B"
             android:onClick="rgclick"
+            android:text="Python" />
+
+        <RadioButton
+            android:id="@+id/g3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="#C5E1A5"
-            android:text="C++"/>
+            android:onClick="rgclick"
+            android:text="C++" />
 
     </RadioGroup>
 </android.support.constraint.ConstraintLayout>
