@@ -13,7 +13,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    CheckBox cb1,cb2;
+    CheckBox cb1,cb2,jav;
     RadioButton rad1;
     RadioGroup rg1;
     Button bt2;
@@ -25,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         cb1 = (CheckBox) findViewById(R.id.ck1);
+
+
+
+
         cb1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton cb1, boolean b) {

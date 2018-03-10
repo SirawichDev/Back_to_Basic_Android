@@ -94,10 +94,14 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="RadG1"
+            android:id="@+id/rad1"
             android:text="Male"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="RadG1"
+            android:id="@+id/rad2"
             android:text="female"/>
     </RadioGroup>
 </LinearLayout>
@@ -117,6 +121,7 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/java"
             android:text="JAVA"
             />
         <CheckBox
@@ -150,5 +155,6 @@
         android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/submit"
         android:text="submit"/>
 </LinearLayout>
