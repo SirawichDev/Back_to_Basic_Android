@@ -3,131 +3,132 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="10dp"
     android:layout_marginLeft="10dp"
-
     android:layout_marginRight="10dp"
+
+    android:layout_marginTop="10dp"
     tools:context="me.softdev.sirawich.cody.Relative_Layout">
 
     <RelativeLayout
+        android:id="@+id/L1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-
-        android:id="@+id/L1">
+        android:layout_height="wrap_content">
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/bt1"
-            android:textAllCaps="false"
-            android:text="btn1" />
-
-        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="btn1"
+            android:textAllCaps="false" />
+
+        <Button
             android:id="@+id/bt2"
-            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
             android:text="btn2"
-            android:layout_centerHorizontal="true" />
+            android:onClick="bt2click"
+            android:textAllCaps="false" />
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/bt3"
-            android:textAllCaps="false"
-            android:text="btn3"
-            android:layout_alignParentRight="true" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/L2"
-        android:layout_below="@id/L1">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/bt4"
-            android:textAllCaps="false"
-            android:text="btn4" />
-
-        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:textAllCaps="false"
-            android:id="@+id/longbt"
-            android:text="Rightof+PerentRight"
-            android:layout_toRightOf="@+id/bt4" />
+            android:text="btn3"
+            android:textAllCaps="false" />
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/L2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/L1">
+
+        <Button
+            android:id="@+id/bt4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="btn4"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/longbt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/bt4"
+            android:text="Rightof+PerentRight"
+            android:textAllCaps="false" />
+    </RelativeLayout>
+
+    <RelativeLayout
         android:id="@+id/L3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/L2">
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
             android:layout_toLeftOf="@+id/bt5"
-            android:textAllCaps="false"
             android:text="ParentStart+toLeft"
-            android:layout_alignParentStart="true" />
+            android:textAllCaps="false" />
 
         <Button
-            android:textAllCaps="false"
+            android:id="@+id/bt5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/bt5"
+            android:layout_alignParentRight="true"
             android:text="btn5"
-            android:layout_alignParentRight="true" />
+            android:textAllCaps="false" />
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/L4"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:id="@+id/L4"
         android:layout_below="@+id/L3"
         android:layout_marginBottom="40dp">
 
         <Button
+            android:id="@+id/bt6"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:textAllCaps="false"
-            android:id="@+id/bt6"
-            android:text="bt6" />
+            android:text="bt6"
+            android:textAllCaps="false" />
 
         <Button
+            android:id="@+id/bt7"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textAllCaps="false"
-            android:id="@+id/bt7"
             android:layout_toRightOf="@+id/bt6"
-            android:text="btn7" />
+            android:text="btn7"
+            android:textAllCaps="false" />
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/L5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/L5"
         android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/bt8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="bt8"
+            android:textAllCaps="false" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/bt8"
-            android:textAllCaps="false"
-            android:text="bt8" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/bt8"
+            android:layout_alignParentRight="true"
             android:text="btn9"
-            android:textAllCaps="false"/>
+            android:textAllCaps="false" />
     </RelativeLayout>
 
 
