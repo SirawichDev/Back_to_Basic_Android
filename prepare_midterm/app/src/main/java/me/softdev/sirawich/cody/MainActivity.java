@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
@@ -12,8 +13,9 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    CheckBox cb1,cb2;
+    CheckBox cb2;
     RadioButton rad1;
+
     RadioGroup rg1;
     Toast t1,t2;
     public static final String TAG = "From CheckBox 1";
@@ -22,7 +24,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        cb1 = (CheckBox) findViewById(R.id.ck1);
+
+       Button btn3 = (Button)findViewById(R.id.btn3);
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                System.out.print("Click!!");
+            }
+
+        });
+        CheckBox cb1 = (CheckBox) findViewById(R.id.ck1);
         cb1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton cb1, boolean b) {
@@ -88,6 +99,8 @@ public class MainActivity extends AppCompatActivity {
                     break;
 
         }
+
     }
+
 }
 

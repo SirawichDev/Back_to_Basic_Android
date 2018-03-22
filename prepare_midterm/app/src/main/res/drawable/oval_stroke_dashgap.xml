@@ -4,9 +4,9 @@
 
     <solid android:color="#8E24AA"/>
     <stroke android:color="#FFF59D"
-        android:width="10dp"
-        android:dashWidth="20dp"
-        android:dashGap="40dp"
+        android:width="60dp"
+        android:dashWidth="12dp"
+        android:dashGap="9dp"
         />
 
 </shape>
