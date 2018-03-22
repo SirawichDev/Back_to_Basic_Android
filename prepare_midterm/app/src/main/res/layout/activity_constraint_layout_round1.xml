@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="me.softdev.sirawich.cody.Constraint_layout_round1">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/con1"
+        android:layout_marginVertical="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/con2"
+    app:layout_constraintTop_toBottomOf="@+id/con1">
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="enter here"
+        android:id="@+id/edit1"
+        app:layout_constraintRight_toLeftOf="@+id/bt1"
+  app:layout_constraintLeft_toLeftOf="parent"
+        />
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt1"
+        app:layout_constraintRight_toLeftOf="@+id/bt2"
+
+        android:text="Check"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt2"
+        android:text="clear"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/con3"
+        app:layout_constraintTop_toBottomOf="@+id/con2">
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="password here"
+            android:id="@+id/edt2"
+            app:layout_constraintRight_toLeftOf="@+id/bt4"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="check"
+            android:id="@+id/bt4"
+            app:layout_constraintRight_toLeftOf="@+id/bt3"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/bt3"
+            android:text="clear"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:id="@+id/con4"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/con3">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sex"
+            android:textSize="20sp"
+            android:id="@+id/sex"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/rg1"
+            app:layout_constraintLeft_toRightOf="@+id/sex">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"/>
+
+
+        </RadioGroup>
+    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/con5"
+        app:layout_constraintTop_toBottomOf="@+id/con4">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/interest"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="Interesting?"/>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rg5"
+            app:layout_constraintLeft_toRightOf="@+id/interest"
+            android:orientation="vertical">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="JAVA"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C++"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Python"/>
+
+        </RadioGroup>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/rg5"
+           android:orientation="vertical">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PHP" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Javascript"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R"/>
+        </RadioGroup>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="sunmit"
+        app:layout_constraintTop_toBottomOf="@+id/con5"/>
+</android.support.constraint.ConstraintLayout>

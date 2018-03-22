@@ -13,10 +13,15 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+<<<<<<< HEAD
     CheckBox cb2;
+=======
+    CheckBox cb1,cb2,jav;
+>>>>>>> 9e6aa8035a40d895463d5fe8ec66e26e5107dd25
     RadioButton rad1;
 
     RadioGroup rg1;
+    Button bt2;
     Toast t1,t2;
     public static final String TAG = "From CheckBox 1";
     public static final String TAG2 = "From CheckBox 2";
@@ -24,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+<<<<<<< HEAD
 
        Button btn3 = (Button)findViewById(R.id.btn3);
         btn3.setOnClickListener(new View.OnClickListener() {
@@ -34,6 +40,13 @@ public class MainActivity extends AppCompatActivity {
 
         });
         CheckBox cb1 = (CheckBox) findViewById(R.id.ck1);
+=======
+        cb1 = (CheckBox) findViewById(R.id.ck1);
+
+
+
+
+>>>>>>> 9e6aa8035a40d895463d5fe8ec66e26e5107dd25
         cb1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton cb1, boolean b) {
@@ -102,5 +115,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+<<<<<<< HEAD
+=======
+    public void clickme(View view){
+        t1 = Toast.makeText(getApplicationContext(), "You Click btn2 ++!", Toast.LENGTH_SHORT);
+        t1.show();
+    }
+>>>>>>> 9e6aa8035a40d895463d5fe8ec66e26e5107dd25
 }
 
