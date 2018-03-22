@@ -50,16 +50,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
+
         android:orientation="horizontal"
         android:layout_gravity="center"
         android:layout_marginHorizontal="20dp"
         >
-=======
         android:layout_marginHorizontal="20dp"
         android:layout_marginVertical="20dp"
         android:orientation="horizontal">
->>>>>>> Midterm
+
 
         <Button
             android:layout_width="wrap_content"
