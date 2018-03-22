@@ -3,4 +3,6 @@
     <color name="darkColorPrimary">#7E57C2</color>
     <color name="darkColorPrimaryDark">#F48FB1</color>
     <color name="darkColorAccent">#2aac4b</color>
+    <color name="greenlight">#B2FF59</color>
+    <color name="bludlight">#18FFFF</color>
 </resources>

@@ -72,7 +72,7 @@
             android:layout_width="wrap_content"
             android:layout_height="300dp"
             android:layout_below="@id/textView"
-            android:src="@drawable/me" />
+            android:src="@drawable/doggy" />
 
 
         <RadioGroup
@@ -104,7 +104,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#FFF59D"
-                android:text="Robot" />
+                android:text="Rabbit" />
 
             <RadioButton
                 android:layout_width="wrap_content"
