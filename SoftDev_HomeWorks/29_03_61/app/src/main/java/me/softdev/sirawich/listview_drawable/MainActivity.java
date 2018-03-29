@@ -15,9 +15,9 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    int[] Image = {R.drawable.bo,R.drawable.mo};
-    String[] Name = {"Tennis","Basketball"};
-    String[] Descr = {"Often","Sometimes"};
+    int[] Image = {R.drawable.tennis,R.drawable.basketball,R.drawable.football,R.drawable.run,R.drawable.swim,R.drawable.hocky};
+    String[] Name = {"Tennis","Basketball","Foor ball","Run","Swim","Hocky"};
+    String[] Descr = {"Often","Sometimes","Often","Sometimes","Sometimes","Sometimes"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +55,12 @@ public class MainActivity extends AppCompatActivity {
             ImageView imgview = (ImageView)view.findViewById(R.id.pic1);
             TextView header = (TextView)view.findViewById(R.id.header);
             TextView description = (TextView)view.findViewById(R.id.Descrip);
-
+            View root = imgview.getRootView();
+            if(i%2==0) {
+                root.setBackgroundColor(getResources().getColor(android.R.color.holo_blue_dark));
+            }else {
+                root.setBackgroundColor(getResources().getColor(android.R.color.tertiary_text_dark));
+            }
             imgview.setImageResource(Image[i]);
             header.setText(Name[i]);
             description.setText(Descr[i]);

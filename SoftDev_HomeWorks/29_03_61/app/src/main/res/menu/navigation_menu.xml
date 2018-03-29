@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
     <item android:id="@+id/nav_name"
         android:icon="@mipmap/ic_person_pin_black_24dp"
         android:title="My name is Sirawich"/>
     <item android:id="@+id/nav_favor"
+
         android:icon="@mipmap/ic_favorite_border_black_24dp"
         android:title="My fevorite"/>
 
