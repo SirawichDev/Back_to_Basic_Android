@@ -8,7 +8,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Mr.Sirawich Voungchuy"
-   
+
         android:textStyle="italic"
         android:textSize="20sp"
         android:textColor="#B2FF59"/>
