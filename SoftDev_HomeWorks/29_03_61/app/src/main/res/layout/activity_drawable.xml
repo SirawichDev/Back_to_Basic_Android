@@ -47,6 +47,7 @@
             android:textColor="@android:color/white"
             android:layout_gravity="center_vertical"
             android:textSize="34sp"
+            android:textStyle="bold"
             android:text="Welcome To My App"/>
 
             <android.support.v7.widget.RecyclerView

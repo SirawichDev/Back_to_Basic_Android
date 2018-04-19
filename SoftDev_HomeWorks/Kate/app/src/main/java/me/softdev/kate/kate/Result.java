@@ -1,4 +1,4 @@
-package me.softdev.sirawich.listview_drawable;
+package me.softdev.kate.kate;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -19,7 +19,7 @@ public class Result extends AppCompatActivity {
 
             int res = bd.getInt("picture");
             String name = bd.getString("Header");
-            h.setText("You're Clicked"+" "+"["+" "+name+" " +"]");
+            h.setText("This Places is "+" "+name);
             il.setImageResource(res);
         }
     }
