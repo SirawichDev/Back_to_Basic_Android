@@ -48,7 +48,7 @@ public class Drawable extends AppCompatActivity implements NavigationView.OnNavi
 
     }
     public class RecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder>{
-        private String[] Header_name = {"Picture 1","Picture2","Pictur3"};
+        private String[] Header_name = {"Picture 1","Picture2","Picture3"};
         private int[] images={R.drawable.sc,R.drawable.sd,R.drawable.ss};
 
         @Override
