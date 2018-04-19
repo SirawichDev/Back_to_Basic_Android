@@ -30,11 +30,13 @@
 
                 <TextView
                     android:id="@+id/header"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textColorHighlight="#fff"
                     android:layout_height="wrap_content"
                     android:text="Picture 1"
                     android:textAllCaps="true"
                     android:textColor="#4FC3F7"
+                    android:textAlignment="center"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
