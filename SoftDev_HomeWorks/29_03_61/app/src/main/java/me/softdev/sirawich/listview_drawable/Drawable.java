@@ -123,6 +123,10 @@ public class Drawable extends AppCompatActivity implements NavigationView.OnNavi
                             Toast.makeText(Drawable.this, "Saved", Toast.LENGTH_SHORT).show();
                             notification.setSmallIcon(R.drawable.ff);
                             notification.setTicker("This is tricker");
+                            notification.setWhen(System.currentTimeMillis());
+                            notification.setContentTitle("This is title");
+                            notification.setContentText("Here");
+
 
                         }
 
