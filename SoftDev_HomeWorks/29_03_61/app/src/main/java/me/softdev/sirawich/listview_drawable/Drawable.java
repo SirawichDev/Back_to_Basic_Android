@@ -1,8 +1,21 @@
 package me.softdev.sirawich.listview_drawable;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.app.TaskStackBuilder;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.preference.PreferenceActivity;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.NotificationCompat;
+
+
+import android.support.v4.app.NotificationManagerCompat;
 import android.support.v4.view.GravityCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.support.v4.widget.DrawerLayout;
@@ -18,14 +31,25 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class Drawable extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
      Toolbar mToolbar = null;
+   public int NOTIFICATION_ID = 234;
     NavigationView navigationView;
     private RecyclerView recyclerView;
+    NotificationCompat.Builder notification;
+    private static final int uniqueID = 40111;
+
+    TextView headers;
+    Button btn,save;
+    ImageView pic;
+
+    private String[] Header_name = {"Picture 1","Picture2","Picture3"};
+    private int[] images={R.drawable.sc,R.drawable.sd,R.drawable.ss};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,12 +68,24 @@ public class Drawable extends AppCompatActivity implements NavigationView.OnNavi
         navigationView.setNavigationItemSelectedListener(this);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        notification = new NotificationCompat.Builder(this);
+        notification.setAutoCancel(true);
+
+    }
+
+
+
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        String v = savedInstanceState.getString("header");
 
 
     }
+
     public class RecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder>{
-        private String[] Header_name = {"Picture 1","Picture2","Picture3"};
-        private int[] images={R.drawable.sc,R.drawable.sd,R.drawable.ss};
+
 
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -76,21 +112,52 @@ public class Drawable extends AppCompatActivity implements NavigationView.OnNavi
                     startActivity(i);
                 }
             });
+            holder.save.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(Drawable.this);
+                    alertDialog.setMessage("Are You Sure You want to Save");
+                    final AlertDialog.Builder builder = alertDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            Toast.makeText(Drawable.this, "Saved", Toast.LENGTH_SHORT).show();
+                            notification.setSmallIcon(R.drawable.ff);
+                            notification.setTicker("This is tricker");
+
+                        }
+
+                    });
+
+
+                    alertDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            finish();
+
+                        }
+                    });
+                    AlertDialog ad = alertDialog.create();
+                    ad.show();
+
+                }
+            });
+
         }
 
         @Override
         public int getItemCount() {
             return Header_name.length;
         }
+
     }
     //class view holder เหมือน custom listview
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-
         TextView headers;
-        Button btn;
+        Button btn,save;
         ImageView pic;
+
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -98,6 +165,7 @@ public class Drawable extends AppCompatActivity implements NavigationView.OnNavi
             headers = (TextView) itemView.findViewById(R.id.header);
             btn = (Button) itemView.findViewById(R.id.btn_click);
             pic = (ImageView) itemView.findViewById(R.id.img1);
+            save = (Button) itemView.findViewById(R.id.saved);
 
         }
     }
@@ -127,4 +195,7 @@ public class Drawable extends AppCompatActivity implements NavigationView.OnNavi
         mDrawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
+
 }

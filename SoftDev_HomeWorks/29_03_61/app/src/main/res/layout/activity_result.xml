@@ -19,14 +19,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="@dimen/margin_top"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/h1"
-                android:textSize="20sp"
+                android:textSize="@dimen/Text_size"
                 android:textStyle="bold"
                 android:textAlignment="center"
-                android:textColor="#00C853"/>
+                android:textColor="@color/Green"/>
         </RelativeLayout>
         <ImageView
             android:layout_width="match_parent"
