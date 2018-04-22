@@ -1,0 +1,4 @@
+#Mon Apr 23 03:17:12 ICT 2018
+base.0=/Users/sirawich/Desktop/Back_to_Basic_Android/SoftDev_HomeWorks/Tester/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex

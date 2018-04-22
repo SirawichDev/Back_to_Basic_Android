@@ -121,7 +121,7 @@ public class Drawable extends AppCompatActivity implements NavigationView.OnNavi
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             Toast.makeText(Drawable.this, "Saved", Toast.LENGTH_SHORT).show();
-                            notification.setSmallIcon(R.drawable.ff);
+                            notification.setSmallIcon(R.drawable.ic_launcher);
                             notification.setTicker("This is tricker");
                             notification.setWhen(System.currentTimeMillis());
                             notification.setContentTitle("This is title");
@@ -131,6 +131,9 @@ public class Drawable extends AppCompatActivity implements NavigationView.OnNavi
                             PendingIntent pendingIntent = PendingIntent.getActivity(Drawable.this,0,intent,PendingIntent.FLAG_UPDATE_CURRENT);
                             notification.setContentIntent(pendingIntent);
 
+                            NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+
+                            nm.notify(uniqueID,notification.build());
                             
 
                         }
