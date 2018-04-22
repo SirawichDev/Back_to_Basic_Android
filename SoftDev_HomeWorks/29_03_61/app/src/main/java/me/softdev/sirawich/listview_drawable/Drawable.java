@@ -127,6 +127,11 @@ public class Drawable extends AppCompatActivity implements NavigationView.OnNavi
                             notification.setContentTitle("This is title");
                             notification.setContentText("Here");
 
+                            Intent intent = new Intent(Drawable.this, Drawable.class);
+                            PendingIntent pendingIntent = PendingIntent.getActivity(Drawable.this,0,intent,PendingIntent.FLAG_UPDATE_CURRENT);
+                            notification.setContentIntent(pendingIntent);
+
+                            
 
                         }
 
