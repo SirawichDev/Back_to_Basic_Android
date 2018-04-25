@@ -10,6 +10,8 @@ import android.content.res.Resources;
 import android.preference.PreferenceActivity;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.NotificationCompat;
 
 
@@ -71,6 +73,7 @@ public class Drawable extends AppCompatActivity implements NavigationView.OnNavi
         notification = new NotificationCompat.Builder(this);
         notification.setAutoCancel(true);
 
+
     }
 
 
@@ -124,8 +127,8 @@ public class Drawable extends AppCompatActivity implements NavigationView.OnNavi
                             notification.setSmallIcon(R.drawable.ic_launcher);
                             notification.setTicker("This is tricker");
                             notification.setWhen(System.currentTimeMillis());
-                            notification.setContentTitle("This is title");
-                            notification.setContentText("Here");
+                            notification.setContentTitle("Saved!!");
+                            notification.setContentText("<3 <3");
 
                             Intent intent = new Intent(Drawable.this, Drawable.class);
                             PendingIntent pendingIntent = PendingIntent.getActivity(Drawable.this,0,intent,PendingIntent.FLAG_UPDATE_CURRENT);
